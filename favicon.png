@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a14"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect x="8" y="8" width="48" height="14" rx="4" fill="url(#acc)" opacity="0.9"/>
+  <rect x="8" y="28" width="13" height="10" rx="3" fill="#3b82f6" opacity="0.7"/>
+  <rect x="26" y="28" width="13" height="10" rx="3" fill="#3b82f6" opacity="0.7"/>
+  <rect x="44" y="28" width="12" height="10" rx="3" fill="#3b82f6" opacity="0.7"/>
+  <rect x="8" y="44" width="13" height="10" rx="3" fill="#6fa3ff" opacity="0.7"/>
+  <rect x="26" y="44" width="13" height="10" rx="3" fill="#6fa3ff" opacity="0.7"/>
+  <rect x="44" y="44" width="12" height="10" rx="3" fill="url(#acc)"/>
+</svg>

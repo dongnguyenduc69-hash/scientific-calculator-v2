@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Math Solver 2026</title>
+    <meta name="description" content="A premium advanced calculator with full arithmetic operations and expression engine.">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== Nền động ngụy trang ===== -->
+    <div class="bg-layer">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ===== Máy tính ===== -->
+    <div class="calculator-wrapper">
+        <div class="calculator-container">
+
+            <!-- Header -->
+            <div class="calc-header">
+                <span class="calc-brand">MATHSOLV<em>R</em></span>
+                <span class="calc-version">v2026</span>
+            </div>
+
+            <!-- Màn hình máy tính -->
+            <div class="display">
+                <div class="display-expression" id="calc-expression">&nbsp;</div>
+                <input type="text"
+                       id="calc-screen"
+                       class="display-screen"
+                       value="0"
+                       disabled
+                       aria-label="Calculator display"
+                       autocomplete="off">
+                <div class="display-cursor"></div>
+            </div>
+
+            <!-- Bàn phím chính -->
+            <div class="keypad" role="grid" aria-label="Calculator keypad">
+                <!-- Hàng 1 -->
+                <button id="btn-ac"       class="btn btn-fn"       onclick="clearScreen()"          aria-label="Clear all">AC</button>
+                <button id="btn-sign"     class="btn btn-fn"       onclick="toggleSign()"           aria-label="Toggle sign">+/-</button>
+                <button id="btn-percent"  class="btn btn-fn"       onclick="applyPercent()"         aria-label="Percent">%</button>
+                <button id="btn-divide"   class="btn btn-operator" onclick="appendOperator('/')"    aria-label="Divide">÷</button>
+
+                <!-- Hàng 2 -->
+                <button id="btn-7"  class="btn btn-num" onclick="appendValue('7')"  aria-label="7">7</button>
+                <button id="btn-8"  class="btn btn-num" onclick="appendValue('8')"  aria-label="8">8</button>
+                <button id="btn-9"  class="btn btn-num" onclick="appendValue('9')"  aria-label="9">9</button>
+                <button id="btn-multiply" class="btn btn-operator" onclick="appendOperator('*')"    aria-label="Multiply">×</button>
+
+                <!-- Hàng 3 -->
+                <button id="btn-4"  class="btn btn-num" onclick="appendValue('4')"  aria-label="4">4</button>
+                <button id="btn-5"  class="btn btn-num" onclick="appendValue('5')"  aria-label="5">5</button>
+                <button id="btn-6"  class="btn btn-num" onclick="appendValue('6')"  aria-label="6">6</button>
+                <button id="btn-subtract" class="btn btn-operator" onclick="appendOperator('-')"    aria-label="Subtract">-</button>
+
+                <!-- Hàng 4 -->
+                <button id="btn-1"  class="btn btn-num" onclick="appendValue('1')"  aria-label="1">1</button>
+                <button id="btn-2"  class="btn btn-num" onclick="appendValue('2')"  aria-label="2">2</button>
+                <button id="btn-3"  class="btn btn-num" onclick="appendValue('3')"  aria-label="3">3</button>
+                <button id="btn-add" class="btn btn-operator btn-op-tall" onclick="appendOperator('+')" aria-label="Add">+</button>
+
+                <!-- Hàng 5 -->
+                <button id="btn-0"     class="btn btn-num btn-wide" onclick="appendValue('0')"  aria-label="0">0</button>
+                <button id="btn-dot"   class="btn btn-num"          onclick="appendDot()"       aria-label="Decimal">.</button>
+                <button id="btn-equal" class="btn btn-equal"        onclick="calculateResult()" aria-label="Equals">=</button>
+            </div>
+
+            <!-- Hàng phím Khoa học (Đã nối lại mạch ngầm triggerManualRoute) -->
+            <div class="sci-row">
+                <button id="btn-sin" class="btn btn-sci-eq" onclick="triggerManualRoute()" aria-label="Sine">sin</button>
+                <button id="btn-cos" class="btn btn-sci-eq" onclick="triggerManualRoute()" aria-label="Cosine">cos</button>
+                <button id="btn-tan" class="btn btn-sci-eq" onclick="triggerManualRoute()" aria-label="Tangent">tan</button>
+            </div>
+            
+            <!-- Khôi phục Màn hình Console chạy ngầm -->
+            <div id="status-console" class="status-console">Math Engine Ready.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
